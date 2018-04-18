@@ -95,12 +95,11 @@ apa.cor.table<-function(data,filename=NA,table.number=NA, show.conf.interval=TRU
           third_line <- rep(" ", length(second_line))
 
           if (show_conf_interval==TRUE) {
-               new_lines     <- rbind(first_line, second_line, third_line)
-               new_lines     <- rbind(first_line, second_line, third_line)
-               new_lines_rtf <- rbind(first_line_rtf, second_line_rtf, third_line)
+               new_lines     <- rbind(first_line)
+               new_lines_rtf <- rbind(first_line_rtf)
           } else {
-               new_lines     <- rbind(first_line, third_line)
-               new_lines_rtf <- rbind(first_line_rtf, third_line)
+               new_lines     <- rbind(first_line)
+               new_lines_rtf <- rbind(first_line_rtf)
           }
 
           output_matrix_console <- rbind(output_matrix_console, new_lines)
