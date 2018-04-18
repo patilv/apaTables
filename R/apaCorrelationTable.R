@@ -88,12 +88,6 @@ apa.cor.table<-function(data,filename=NA,table.number=NA, show.conf.interval=TRU
      for (i in 2:number_variables) {
           first_line <- c(output_variable_names[i], output_descriptives[i,], output_cor[i,])
           first_line_rtf <- c(output_variable_names[i], output_descriptives[i,], output_cor_rtf[i,])
-
-          second_line <- c(left_padding, output_ci[i,])
-          second_line_rtf <- c(left_padding, output_ci_rtf[i,])
-
-          third_line <- rep(" ", length(second_line))
-
           if (show_conf_interval==TRUE) {
                new_lines     <- rbind(first_line)
                new_lines_rtf <- rbind(first_line_rtf)
